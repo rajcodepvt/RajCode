@@ -1,5 +1,7 @@
-import { useState } from "react";
 import styled from "styled-components";
+import WhatsApp from "../../assets/whatsapp.svg";
+import Instagram from "../../assets/instagram-square-brands.svg";
+import Gmail from "../../assets/envelope-open-solid.svg";
 
 const ContactSection = styled.section`
   width: 100vw;
@@ -15,7 +17,7 @@ const Title = styled.h1`
   color: var(--white);
   display: inline-block;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   position: relative;
   @media only Screen and (max-width: 40em) {
     font-size: 1.5rem;
@@ -32,245 +34,94 @@ const Title = styled.h1`
   }
 `;
 
-const StepLabel = styled.p`
-  color: var(--pink);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+const SubText = styled.p`
+  color: var(--nav2);
+  font-size: calc(0.5rem + 0.5vw);
+  margin-bottom: 3rem;
+  text-align: center;
 `;
 
-const Form = styled.form`
+const Links = styled.div`
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media only Screen and (max-width: 40em) {
+    gap: 1.5rem;
+  }
+`;
+
+const SocialLink = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 40vw;
-  min-height: 12rem;
-  @media only Screen and (max-width: 48em) {
-    width: 80vw;
-  }
-  @media only Screen and (max-width: 40em) {
-    width: 90vw;
-  }
-  input,
-  textarea {
-    width: 100%;
-    padding: 1rem calc(0.5rem + 1vw);
-    background-color: var(--nav2);
-    border: none;
-    border-radius: 4px;
-    color: #eff7f8;
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    &:active,
-    &:focus {
-      border: none;
-      outline: none;
-      background-color: var(--nav);
-    }
-    &::placeholder {
-      color: #eff7f8;
-      opacity: 0.6;
-    }
-  }
-  textarea {
-    min-height: 8rem;
-    resize: vertical;
-  }
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  width: 100%;
-  justify-content: center;
-`;
-
-const Button = styled.button`
-  padding: 0.8rem 2rem;
-  background-color: var(--white);
+  gap: 0.8rem;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--nav);
   border-radius: 20px;
-  font-size: 1.1rem;
-  color: #0a0b10;
-  cursor: pointer;
-  transition: transform 0.3s;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
   &:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    background-color: var(--nav2);
   }
-  &:active {
-    transform: scale(0.9);
+  img {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(100%);
+    transition: all 0.3s ease;
+  }
+  &:hover img {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(216deg)
+      brightness(100%) contrast(97%);
   }
   @media only Screen and (max-width: 40em) {
-    font-size: 1rem;
-    padding: 0.6rem 1.5rem;
+    padding: 1.2rem 1.8rem;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 `;
 
-const BackBtn = styled(Button)`
-  background-color: transparent;
+const Label = styled.span`
   color: var(--white);
-  border: 2px solid var(--white);
-`;
-
-const ErrorMsg = styled.p`
-  color: #ff6b6b;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  @media only Screen and (max-width: 40em) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Contact = () => {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const [emailError, setEmailError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
-
-  const handleNext = () => {
-    if (step === 2) {
-      if (!formData.email.includes("@") || !formData.email.includes(".")) {
-        setEmailError("Please enter a valid email with @ and .");
-        return;
-      }
-      setEmailError("");
-    }
-    if (step === 3) {
-      if (!formData.phone) {
-        setPhoneError("Phone number is required");
-        return;
-      }
-      setPhoneError("");
-    }
-    setStep((prev) => prev + 1);
-  };
-
-  const handleBack = () => {
-    setEmailError("");
-    setPhoneError("");
-    setStep((prev) => prev - 1);
-  };
-
-  const handlePhoneChange = (e) => {
-    const value = e.target.value.replace(/[^0-9+]/g, "");
-    setFormData((prev) => ({ ...prev, phone: value }));
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-    }
-  };
-
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I will get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    setStep(1);
-  };
-
   return (
     <ContactSection id="contact">
       <Title>Get in touch</Title>
-      <StepLabel>Step {step} of 4</StepLabel>
-      <Form onKeyDown={handleKeyDown}>
-        {step === 1 && (
-          <>
-            <input
-              name="name"
-              type="text"
-              placeholder="Your name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              autoFocus
-            />
-            <Buttons>
-              <Button type="button" onClick={handleNext}>
-                Next
-              </Button>
-            </Buttons>
-          </>
-        )}
+      <SubText>Feel free to reach out through any of these platforms</SubText>
+      <Links>
+        <SocialLink
+          href="https://wa.me/918271754978?text=Hi%20Raj%2C%20I%20found%20your%20website"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={WhatsApp} alt="WhatsApp" />
+          <Label>WhatsApp</Label>
+        </SocialLink>
 
-        {step === 2 && (
-          <>
-            <input
-              name="email"
-              type="email"
-              placeholder="Enter your email address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              autoFocus
-            />
-            {emailError && <ErrorMsg>{emailError}</ErrorMsg>}
-            <Buttons>
-              <BackBtn type="button" onClick={handleBack}>
-                Back
-              </BackBtn>
-              <Button type="button" onClick={handleNext}>
-                Next
-              </Button>
-            </Buttons>
-          </>
-        )}
+        <SocialLink
+          href="https://www.instagram.com/rajcodepvt/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Instagram} alt="Instagram" />
+          <Label>Instagram</Label>
+        </SocialLink>
 
-        {step === 3 && (
-          <>
-            <input
-              name="phone"
-              type="tel"
-              placeholder="Enter your phone number"
-              value={formData.phone}
-              onChange={handlePhoneChange}
-              required
-              autoFocus
-            />
-            {phoneError && <ErrorMsg>{phoneError}</ErrorMsg>}
-            <Buttons>
-              <BackBtn type="button" onClick={handleBack}>
-                Back
-              </BackBtn>
-              <Button type="button" onClick={handleNext}>
-                Next
-              </Button>
-            </Buttons>
-          </>
-        )}
-
-        {step === 4 && (
-          <>
-            <textarea
-              name="message"
-              placeholder="Your message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              autoFocus
-            ></textarea>
-            <Buttons>
-              <BackBtn type="button" onClick={handleBack}>
-                Back
-              </BackBtn>
-              <Button type="button" onClick={handleSubmit}>
-                Send
-              </Button>
-            </Buttons>
-          </>
-        )}
-      </Form>
+        <SocialLink href="mailto:rajcodepvt@gmail.com?subject=Email%20From%20Your%20Website">
+          <img src={Gmail} alt="Email" />
+          <Label>Email</Label>
+        </SocialLink>
+      </Links>
     </ContactSection>
   );
 };
