@@ -45,7 +45,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   color: var(--white);
   display: inline-block;
   font-size: 2rem;
@@ -253,46 +253,46 @@ const Services = () => {
       <Content ref={(el) => setContentRef(el, 0)}>
         <TextBlock
           topic="Design"
-          title={<h1>I build award-winning designs</h1>}
+          title={<h3>I build award-winning designs</h3>}
           subText={
-            <h5>
+            <p>
               I make things look good. Obviously.
-            </h5>
+            </p>
           }
         />
         <OBJ>
-          <img src="/assets/3dtube.png" alt="Tube Object" width="400" height="400" />
+          <img src="/assets/3dtube.webp" alt="Tube Object" width="246" height="246" />
         </OBJ>
         <SvgBlock svg="Design.svg" />
       </Content>
       <Content ref={(el) => setContentRef(el, 1)}>
         <TextBlock
           topic="Develop"
-          title={<h1>I develop high-quality websites & apps</h1>}
+          title={<h3>I develop high-quality websites & apps</h3>}
           subText={
-            <h5>
+            <p>
               I build fast, clean websites and apps — no bloated templates, no
               shortcuts.
-            </h5>
+            </p>
           }
         />
         <OBJ>
-          <img src="/assets/3dtriangle.png" alt="Cone Object" width="400" height="400" />
+          <img src="/assets/3dtriangle.webp" alt="Cone Object" width="249" height="269" />
         </OBJ>
         <SvgBlock svg="Develope.svg" />
       </Content>
       <Content ref={(el) => setContentRef(el, 2)}>
         <TextBlock
           topic="Support"
-          title={<h1>I provide support for your digital presence</h1>}
+          title={<h3>I provide support for your digital presence</h3>}
           subText={
-            <h5>
+            <p>
               Something breaks? I fix it before you finish typing the message.
-            </h5>
+            </p>
           }
         />
         <OBJ>
-          <img src="/assets/3dcapsule.png" alt="Capsule Object" width="400" height="400" />
+          <img src="/assets/3dcapsule.webp" alt="Capsule Object" width="289" height="257" />
         </OBJ>
         <SvgBlock svg="Support.svg" />
       </Content>

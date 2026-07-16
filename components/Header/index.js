@@ -236,8 +236,8 @@ const Header = () => {
   return (
     <Headers ref={ref}>
       <Logo>
-        <img src="/assets/logo.svg" alt="RajCode" />
-        <h3>RajCode</h3>
+        <img src="/assets/logo.svg" alt="RajCode" width="62" height="76" />
+        <span>RajCode</span>
       </Logo>
       <Nav>
         <a href="#home" onClick={(e) => scrollUp("home", e)}>
@@ -253,7 +253,7 @@ const Header = () => {
           <Button>Contact Me</Button>
         </a>
       </Nav>
-      <HamburgerBtn $clicked={+click} onClick={() => setClick(!click)}>
+      <HamburgerBtn $clicked={+click} onClick={() => setClick(!click)} aria-label="Toggle navigation menu">
         <span></span>
       </HamburgerBtn>
       <MobileMenu $clicked={+click}>

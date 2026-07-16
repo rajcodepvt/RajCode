@@ -48,6 +48,14 @@ const RightText = styled.div`
 
 const LeftText = styled.div`
   text-align: left;
+  a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover {
+      color: var(--pink);
+    }
+  }
   @media only Screen and (max-width: 48em) {
     text-align: center;
     font-size: 0.9rem;

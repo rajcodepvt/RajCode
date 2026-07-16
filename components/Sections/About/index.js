@@ -51,7 +51,7 @@ const Main = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   font-size: 2rem;
   display: inline-block;
 `;
@@ -98,7 +98,7 @@ const Human = styled.div`
     display: none;
   }
 `;
-const Text = styled.h4`
+const Text = styled.p`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
   color: var(--nav2);
@@ -130,9 +130,9 @@ const AboutText = styled.div`
 const About = () => {
   return (
     <AboutSection id="about">
-      <Waves src="/assets/waves.svg" alt="" />
+      <Waves src="/assets/waves.svg" alt="" width="1340" height="236" />
       <Hand>
-        <img src="/assets/hand.svg" alt="" />
+        <img src="/assets/hand.svg" alt="" width="239" height="280" />
       </Hand>
       <Main>
         <div>
@@ -141,7 +141,7 @@ const About = () => {
         </div>
         <Content>
           <Rocket>
-            <img src="/assets/rocket image.png" alt="" width="400" height="400" />
+            <img src="/assets/rocket image.webp" alt="" width="361" height="361" />
           </Rocket>
           <AboutText>
             <Human>

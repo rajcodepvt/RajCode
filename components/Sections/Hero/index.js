@@ -142,7 +142,7 @@ const Title = styled.h1`
   }
 `;
 
-const SubText = styled.h5`
+const SubText = styled.p`
   font-size: calc(0.5rem + 0.5vw);
   color: var(--nav2);
   @media only Screen and (max-width: 48em) {
@@ -202,13 +202,13 @@ const HeroSection = () => {
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
-          <img src="/assets/blobPink.png" alt="" width="400" height="400" />
+          <img src="/assets/blobPink.webp" alt="" width="216" height="263" />
         </PinkBlob>
         <WhiteBlob>
-          <img src="/assets/blob white.png" alt="" width="400" height="400" />
+          <img src="/assets/blob white.webp" alt="" width="288" height="233" />
         </WhiteBlob>
         <PurpleBlob>
-          <img src="/assets/blob purple.png" alt="" width="400" height="400" />
+          <img src="/assets/blob purple.webp" alt="" width="214" height="390" />
         </PurpleBlob>
       </Blobs>
 

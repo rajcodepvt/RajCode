@@ -13,7 +13,7 @@ const ContactSection = styled.section`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   color: var(--white);
   display: inline-block;
   font-size: 2rem;
@@ -35,7 +35,7 @@ const Title = styled.h1`
 `;
 
 const SubText = styled.p`
-  color: var(--nav2);
+  color: #6b6b80;
   font-size: calc(0.5rem + 0.5vw);
   margin-bottom: 3rem;
   text-align: center;
@@ -115,7 +115,7 @@ const Contact = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/whatsapp.svg" alt="WhatsApp" />
+          <img src="/assets/whatsapp.svg" alt="" />
           <Label>WhatsApp</Label>
         </SocialLink>
 
@@ -124,12 +124,12 @@ const Contact = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/instagram-square-brands.svg" alt="Instagram" />
+          <img src="/assets/instagram-square-brands.svg" alt="" />
           <Label>Instagram</Label>
         </SocialLink>
 
         <SocialLink href="mailto:rajcodepvt@gmail.com?subject=Email%20From%20Your%20Website">
-          <img src="/assets/envelope-open-solid.svg" alt="Email" />
+          <img src="/assets/envelope-open-solid.svg" alt="" />
           <Label>Email</Label>
         </SocialLink>
       </Links>
