@@ -9,21 +9,21 @@ const FOOTER = styled.footer`
   @media only Screen and (max-width: 48em) {
     flex-direction: column;
     align-items: center;
-    div {
-      &:first-child {
-        margin-bottom: 1rem;
-      }
-    }
+    gap: 1rem;
+    padding: 1.5rem calc(2rem + 2vw);
+    text-align: center;
   }
 `;
 
 const RightText = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
   img {
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: 1rem;
     filter: invert(100%);
     transition: all 0.2s ease-in-out;
   }

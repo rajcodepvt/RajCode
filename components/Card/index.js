@@ -20,6 +20,15 @@ const CARD = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only Screen and (max-width: 48em) {
+    width: calc(10rem + 14vw);
+    height: calc(9rem + 13vw);
+  }
+  @media only Screen and (max-width: 40em) {
+    width: calc(12rem + 16vw);
+    height: calc(10rem + 14vw);
+    margin-top: calc(4rem + 4vw);
+  }
 `;
 
 const Image = styled.div`
@@ -41,9 +50,14 @@ const Image = styled.div`
 const TEXT = styled.h4`
   color: var(--white);
   padding: 0 calc(1rem + 1vw);
-
   text-align: center;
   font-size: calc(0.6rem + 0.5vw);
+  @media only Screen and (max-width: 48em) {
+    font-size: calc(0.7rem + 0.6vw);
+  }
+  @media only Screen and (max-width: 40em) {
+    font-size: 0.85rem;
+  }
 `;
 
 const NAME = styled.h3`

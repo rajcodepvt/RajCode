@@ -95,7 +95,7 @@ const Lb = styled.div`
   position: relative;
   z-index: 15;
   @media only Screen and (max-width: 48em) {
-    width: 80%;
+    width: 85%;
     text-align: center;
     align-items: center;
     justify-content: space-around;
@@ -103,6 +103,7 @@ const Lb = styled.div`
     filter: drop-shadow(2px 4px 6px black);
   }
   @media only Screen and (max-width: 40em) {
+    width: 90%;
     filter: none;
   }
 `;
@@ -132,11 +133,20 @@ const Title = styled.h1`
   font-size: calc(2rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
+  @media only Screen and (max-width: 48em) {
+    font-size: calc(1.5rem + 2vw);
+  }
+  @media only Screen and (max-width: 40em) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SubText = styled.h5`
   font-size: calc(0.5rem + 0.5vw);
   color: var(--nav2);
+  @media only Screen and (max-width: 48em) {
+    font-size: 0.9rem;
+  }
 `;
 
 const CTA = styled.button`

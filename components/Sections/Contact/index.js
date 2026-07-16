@@ -8,6 +8,9 @@ const ContactSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media only Screen and (max-width: 40em) {
+    padding: calc(2rem + 2vw) 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -43,8 +46,12 @@ const Links = styled.div`
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  @media only Screen and (max-width: 40em) {
+  padding: 0 1.5rem;
+  @media only Screen and (max-width: 48em) {
     gap: 1.5rem;
+  }
+  @media only Screen and (max-width: 40em) {
+    gap: 1rem;
   }
 `;
 
@@ -72,8 +79,15 @@ const SocialLink = styled.a`
     filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(216deg)
       brightness(100%) contrast(97%);
   }
+  @media only Screen and (max-width: 48em) {
+    padding: 1.2rem 2rem;
+    img {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
   @media only Screen and (max-width: 40em) {
-    padding: 1.2rem 1.8rem;
+    padding: 1rem 1.5rem;
     img {
       width: 2.5rem;
       height: 2.5rem;

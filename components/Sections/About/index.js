@@ -40,9 +40,13 @@ const Main = styled.div`
     margin: 0 calc(5rem + 5vw);
     margin-top: 10rem;
   }
+  @media only Screen and (max-width: 48em) {
+    margin: 5rem calc(3rem + 3vw);
+    margin-top: 8rem;
+  }
   @media only Screen and (max-width: 40em) {
     align-items: center;
-    margin: 3rem calc(3rem + 3vw);
+    margin: 4rem calc(2rem + 2vw);
   }
 `;
 
@@ -63,8 +67,10 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   @media only Screen and (max-width: 40em) {
     flex-direction: column;
+    gap: 3rem;
   }
 `;
 
@@ -95,6 +101,13 @@ const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
   color: var(--nav2);
+  @media only Screen and (max-width: 48em) {
+    font-size: 1rem;
+  }
+  @media only Screen and (max-width: 40em) {
+    font-size: 0.95rem;
+    text-align: center;
+  }
 `;
 const Circle = styled.span`
   display: inline-block;

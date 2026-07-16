@@ -20,6 +20,12 @@ const ServiceSection = styled.section`
   justify-content: center;
   position: relative;
   padding-top: 20rem;
+  @media only Screen and (max-width: 48em) {
+    padding-top: 15rem;
+  }
+  @media only Screen and (max-width: 40em) {
+    padding-top: 12rem;
+  }
 `;
 
 const Background = styled.div`
@@ -78,16 +84,17 @@ const Content = styled.div`
   margin: 10rem 10rem;
   position: relative;
   @media only Screen and (max-width: 64em) {
-    margin: 10rem calc(4rem + 5vw);
+    margin: 8rem calc(4rem + 5vw);
   }
   @media only Screen and (max-width: 48em) {
     display: block;
+    margin: 6rem calc(3rem + 3vw);
     &:last-child {
       margin-bottom: 2rem;
     }
   }
   @media only Screen and (max-width: 40em) {
-    margin: 10rem calc(2rem + 3vw);
+    margin: 5rem calc(1.5rem + 2vw);
     &:last-child {
       margin-bottom: 1rem;
     }
@@ -102,9 +109,12 @@ const OBJ = styled.div`
   justify-content: center;
   align-items: center;
   width: 20vw;
-
   @media only Screen and (max-width: 48em) {
-    opacity: 0.5;
+    opacity: 0.3;
+    width: 15vw;
+  }
+  @media only Screen and (max-width: 40em) {
+    display: none;
   }
 `;
 
