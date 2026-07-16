@@ -1,15 +1,35 @@
 "use client";
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import dynamic from "next/dynamic";
 
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+const Slider = dynamic(() => import("react-slick"), {
+  ssr: false,
+  loading: () => <CarouselLoader />,
+});
 
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 import Card from "../../Card/index";
+
+const shimmer = keyframes`
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+`;
+
+const CarouselLoader = styled.div`
+  width: 50vw;
+  height: 200px;
+  background: linear-gradient(90deg, #35353f 25%, #3f3d56 50%, #35353f 75%);
+  background-size: 200% 100%;
+  animation: ${shimmer} 1.5s ease-in-out infinite;
+  border-radius: 12px;
+  @media only Screen and (max-width: 40em) {
+    width: 90vw;
+  }
+`;
 
 const Section = styled.div`
   display: flex;

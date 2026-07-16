@@ -1,6 +1,8 @@
 import StyledComponentsRegistry, {
   GlobalStyle,
 } from "../lib/registry";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   metadataBase: new URL("https://rajcode.vercel.app"),
@@ -54,6 +56,8 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <GlobalStyle />
           {children}
+          <Analytics />
+          <SpeedInsights />
         </StyledComponentsRegistry>
       </body>
     </html>
