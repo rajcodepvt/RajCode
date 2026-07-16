@@ -149,9 +149,10 @@ const About = () => {
             </Human>
 
             <Text>
-              I've been writing code long enough to know what works and what's
-              just noise. You're here because you need a site that doesn't look
-              like it was built in 2015 — so let's talk.
+              I&apos;ve been writing code long enough to know what works and
+              what&apos;s just noise. You&apos;re here because you need a site
+              that doesn&apos;t look like it was built in 2015 — so let&apos;s
+              talk.
             </Text>
             <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />

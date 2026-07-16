@@ -218,9 +218,9 @@ const HeroSection = () => {
             <Circle />
             <span>I Build Web</span>
           </Topic>
-          <Title>I don't just build websites.</Title>
+          <Title>I don&apos;t just build websites.</Title>
           <SubText>
-            I build the ones your competitors wish they'd thought of first.
+            I build the ones your competitors wish they&apos;d thought of first.
           </SubText>
           <CTA onClick={scrollToContact}>
             Get in touch &nbsp;
