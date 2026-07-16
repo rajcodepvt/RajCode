@@ -7,12 +7,13 @@ const move = keyframes`
 `;
 
 const AboutSection = styled.section`
-  width: 100vw;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;
 const Waves = styled.img`
   width: 100%;

@@ -18,8 +18,6 @@ const FOOTER = styled.footer`
 const RightText = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 0.5rem;
   img {
     width: 1.5rem;
@@ -28,6 +26,8 @@ const RightText = styled.div`
     transition: all 0.2s ease-in-out;
   }
   a {
+    display: flex;
+    align-items: center;
     &:hover {
       img {
         transform: scale(1.5);
@@ -36,10 +36,24 @@ const RightText = styled.div`
       }
     }
   }
+  @media only Screen and (max-width: 40em) {
+    font-size: 0.85rem;
+    gap: 0.4rem;
+    img {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
 `;
+
 const LeftText = styled.div`
   text-align: left;
+  @media only Screen and (max-width: 48em) {
+    text-align: center;
+    font-size: 0.9rem;
+  }
 `;
+
 const Footer = () => {
   return (
     <FOOTER>
@@ -54,11 +68,9 @@ const Footer = () => {
         <a href="https://twitter.com/rajcodepvt">
           <img src="/assets/twitter-square-brands.svg" alt="Twitter" />
         </a>
-        &nbsp;
         <a href="https://www.instagram.com/rajcodepvt/">
           <img src="/assets/instagram-square-brands.svg" alt="Instagram" />
         </a>
-        &nbsp;
         <a href="mailto:rajcodepvt@gmail.com?subject=Email From Your Website">
           <img src="/assets/envelope-open-solid.svg" alt="Gmail" />
         </a>

@@ -13,13 +13,14 @@ if (typeof window !== "undefined") {
 }
 
 const ServiceSection = styled.section`
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   padding-top: 20rem;
+  overflow: hidden;
   @media only Screen and (max-width: 48em) {
     padding-top: 15rem;
   }
@@ -36,7 +37,7 @@ const Background = styled.div`
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 85vh;
   z-index: -1;
   background-color: #0a0b10;

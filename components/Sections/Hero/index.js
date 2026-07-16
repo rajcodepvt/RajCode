@@ -9,12 +9,13 @@ const move = keyframes`
 `;
 
 const HomeSection = styled.section`
-  width: 100vw;
+  width: 100%;
   height: 45vw;
   background-color: #0a0b10;
   display: flex;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   @media only Screen and (max-width: 48em) {
     height: 70vw;
     display: block;
@@ -58,12 +59,12 @@ const MainContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70vw;
+  width: 70%;
   @media only Screen and (max-width: 48em) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
   }
 `;
 
