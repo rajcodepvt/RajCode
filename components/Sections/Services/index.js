@@ -167,7 +167,6 @@ const Services = () => {
 
       contents.forEach((el, index) => {
         const textBlock = el.querySelector("#leftBlock");
-        const objBlock = el.querySelector("div > img")?.parentElement;
         const svgBlock = el.querySelector("#svgBlock");
 
         if (!textBlock || !svgBlock) return;
@@ -189,21 +188,6 @@ const Services = () => {
             snap: true,
           },
         });
-
-        if (objBlock) {
-          t1.to(objBlock, {
-            transform: "scale(0)",
-            ease: "power2.inOut",
-            scrollTrigger: {
-              id: `section-${index + 1}`,
-              trigger: objBlock,
-              start: "top center",
-              end: "bottom center",
-              scrub: true,
-              snap: true,
-            },
-          });
-        }
 
         t1.from(svgBlock, {
           y: 400,
@@ -261,10 +245,7 @@ const Services = () => {
           }
         />
         <OBJ>
-          <picture>
-            <source media="(min-width: 48em)" srcSet="/assets/3dtube-desktop.webp" />
-            <img src="/assets/3dtube.webp" alt="Tube Object" width="246" height="246" />
-          </picture>
+          <img src="/assets/3dtube.webp" srcSet="/assets/3dtube.webp 1x, /assets/3dtube-2x.webp 2x" alt="Tube Object" width="246" height="246" />
         </OBJ>
         <SvgBlock svg="Design.svg" />
       </Content>
@@ -280,10 +261,7 @@ const Services = () => {
           }
         />
         <OBJ>
-          <picture>
-            <source media="(min-width: 48em)" srcSet="/assets/3dtriangle-desktop.webp" />
-            <img src="/assets/3dtriangle.webp" alt="Cone Object" width="249" height="269" />
-          </picture>
+          <img src="/assets/3dtriangle.webp" srcSet="/assets/3dtriangle.webp 1x, /assets/3dtriangle-2x.webp 2x" alt="Cone Object" width="249" height="269" />
         </OBJ>
         <SvgBlock svg="Develope.svg" />
       </Content>
@@ -298,10 +276,7 @@ const Services = () => {
           }
         />
         <OBJ>
-          <picture>
-            <source media="(min-width: 48em)" srcSet="/assets/3dcapsule-desktop.webp" />
-            <img src="/assets/3dcapsule.webp" alt="Capsule Object" width="289" height="257" />
-          </picture>
+          <img src="/assets/3dcapsule.webp" srcSet="/assets/3dcapsule.webp 1x, /assets/3dcapsule-2x.webp 2x" alt="Capsule Object" width="289" height="257" />
         </OBJ>
         <SvgBlock svg="Support.svg" />
       </Content>

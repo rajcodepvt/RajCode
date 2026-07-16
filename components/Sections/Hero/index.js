@@ -202,22 +202,13 @@ const HeroSection = () => {
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
-          <picture>
-            <source media="(min-width: 48em)" srcSet="/assets/blobPink-desktop.webp" />
-            <img src="/assets/blobPink.webp" alt="" width="216" height="263" />
-          </picture>
+          <img src="/assets/blobPink.webp" alt="" width="216" height="263" />
         </PinkBlob>
         <WhiteBlob>
-          <picture>
-            <source media="(min-width: 48em)" srcSet="/assets/blob white-desktop.webp" />
-            <img src="/assets/blob white.webp" alt="" width="288" height="233" />
-          </picture>
+          <img src="/assets/blob white.webp" alt="" width="288" height="233" />
         </WhiteBlob>
         <PurpleBlob>
-          <picture>
-            <source media="(min-width: 48em)" srcSet="/assets/blob purple-desktop.webp" />
-            <img src="/assets/blob purple.webp" alt="" width="214" height="390" />
-          </picture>
+          <img src="/assets/blob purple.webp" alt="" width="214" height="390" />
         </PurpleBlob>
       </Blobs>
 
