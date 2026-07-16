@@ -256,7 +256,7 @@ const Services = () => {
           title={<h1>I build award-winning designs</h1>}
           subText={
             <h5>
-              I help clients with great design to attract more customers
+              I make things look good. Obviously.
             </h5>
           }
         />
@@ -271,8 +271,8 @@ const Services = () => {
           title={<h1>I develop high-quality websites & apps</h1>}
           subText={
             <h5>
-              I build appropriate solutions to develop your website & app with
-              the best tools available
+              I build fast, clean websites and apps — no bloated templates, no
+              shortcuts.
             </h5>
           }
         />
@@ -287,9 +287,7 @@ const Services = () => {
           title={<h1>I provide support for your digital presence</h1>}
           subText={
             <h5>
-              Once your system is online, I will stay available to help you use
-              it and provide technical support and maintenance for your
-              business
+              Something breaks? I fix it before you finish typing the message.
             </h5>
           }
         />

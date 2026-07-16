@@ -4,7 +4,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import HeroSection from "../components/Sections/Hero";
 import About from "../components/Sections/About";
 import Services from "../components/Sections/Services";
-import Testimonials from "../components/Sections/Testimonials";
+import Process from "../components/Sections/Process";
 import Contact from "../components/Sections/Contact";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
         <HeroSection />
         <About />
         <Services />
-        <Testimonials />
+        <Process />
         <Contact />
       </main>
       <Footer />

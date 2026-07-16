@@ -8,11 +8,11 @@ export const metadata = {
   metadataBase: new URL("https://rajcode.vercel.app"),
   title: "RajCode | Freelance Web Developer",
   description:
-    "RajCode - Freelance web developer specializing in React, modern web apps, and creative designs. Let's build something great together.",
+    "Freelance web developer building fast, modern websites that actually convert. React, clean code, no shortcuts.",
   openGraph: {
     title: "RajCode | Freelance Web Developer",
     description:
-      "Freelance web developer specializing in React, modern web apps, and creative designs. Let's build something great together.",
+      "Freelance web developer building fast, modern websites that actually convert. React, clean code, no shortcuts.",
     url: "https://rajcode.vercel.app/",
     siteName: "RajCode",
     type: "website",
@@ -28,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "RajCode | Freelance Web Developer",
     description:
-      "Freelance web developer specializing in React, modern web apps, and creative designs. Let's build something great together.",
+      "Freelance web developer building fast, modern websites that actually convert. React, clean code, no shortcuts.",
     images: ["/logo512.png"],
   },
   icons: {

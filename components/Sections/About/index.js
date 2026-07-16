@@ -149,10 +149,9 @@ const About = () => {
             </Human>
 
             <Text>
-              I help my clients tell their story, grow and stand
-              out in an increasingly competitive digital world, through creative
-              projects that are able to attract and engage, creating strategic
-              value.
+              I've been writing code long enough to know what works and what's
+              just noise. You're here because you need a site that doesn't look
+              like it was built in 2015 — so let's talk.
             </Text>
             <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />
