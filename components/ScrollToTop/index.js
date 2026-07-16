@@ -78,7 +78,7 @@ const ScrollToTop = () => {
 
   return (
     <Up onClick={scrollUp}>
-      <img ref={ref} src="/assets/arrow-up.svg" alt="to top" />
+      <img ref={ref} src="/assets/arrow-up.svg" alt="to top" width="48" height="48" />
     </Up>
   );
 };

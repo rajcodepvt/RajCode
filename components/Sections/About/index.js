@@ -141,7 +141,10 @@ const About = () => {
         </div>
         <Content>
           <Rocket>
-            <img src="/assets/rocket image.webp" alt="" width="361" height="361" />
+            <picture>
+              <source media="(min-width: 48em)" srcSet="/assets/rocket image-desktop.webp" />
+              <img src="/assets/rocket image.webp" alt="" width="361" height="361" />
+            </picture>
           </Rocket>
           <AboutText>
             <Human>

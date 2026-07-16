@@ -261,7 +261,10 @@ const Services = () => {
           }
         />
         <OBJ>
-          <img src="/assets/3dtube.webp" alt="Tube Object" width="246" height="246" />
+          <picture>
+            <source media="(min-width: 48em)" srcSet="/assets/3dtube-desktop.webp" />
+            <img src="/assets/3dtube.webp" alt="Tube Object" width="246" height="246" />
+          </picture>
         </OBJ>
         <SvgBlock svg="Design.svg" />
       </Content>
@@ -277,7 +280,10 @@ const Services = () => {
           }
         />
         <OBJ>
-          <img src="/assets/3dtriangle.webp" alt="Cone Object" width="249" height="269" />
+          <picture>
+            <source media="(min-width: 48em)" srcSet="/assets/3dtriangle-desktop.webp" />
+            <img src="/assets/3dtriangle.webp" alt="Cone Object" width="249" height="269" />
+          </picture>
         </OBJ>
         <SvgBlock svg="Develope.svg" />
       </Content>
@@ -292,7 +298,10 @@ const Services = () => {
           }
         />
         <OBJ>
-          <img src="/assets/3dcapsule.webp" alt="Capsule Object" width="289" height="257" />
+          <picture>
+            <source media="(min-width: 48em)" srcSet="/assets/3dcapsule-desktop.webp" />
+            <img src="/assets/3dcapsule.webp" alt="Capsule Object" width="289" height="257" />
+          </picture>
         </OBJ>
         <SvgBlock svg="Support.svg" />
       </Content>

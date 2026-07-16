@@ -28,6 +28,8 @@ const RightText = styled.div`
   a {
     display: flex;
     align-items: center;
+    padding: 0.5rem;
+    margin: -0.5rem;
     &:hover {
       img {
         transform: scale(1.5);

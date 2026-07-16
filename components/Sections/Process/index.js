@@ -75,7 +75,7 @@ const StepNumber = styled.div`
   flex-shrink: 0;
 `;
 
-const StepTitle = styled.h4`
+const StepTitle = styled.h3`
   font-size: 1.2rem;
   color: #0a0b10;
   font-weight: 600;

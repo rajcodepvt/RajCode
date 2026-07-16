@@ -35,7 +35,7 @@ const Title = styled.h2`
 `;
 
 const SubText = styled.p`
-  color: #6b6b80;
+  color: #7d7d94;
   font-size: calc(0.5rem + 0.5vw);
   margin-bottom: 3rem;
   text-align: center;

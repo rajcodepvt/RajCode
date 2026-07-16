@@ -51,6 +51,8 @@ const Nav = styled.nav`
     font-weight: 600;
     line-height: 1.5;
     color: var(--white);
+    padding: 0.5rem 0.25rem;
+    margin: -0.25rem;
     &::after {
       content: "";
       display: block;
@@ -98,8 +100,10 @@ const HamburgerBtn = styled.button`
   position: relative;
   background-color: transparent;
   width: 2rem;
-  height: 2px;
-  margin-top: 0rem;
+  height: 2rem;
+  padding: 1rem;
+  margin: -1rem 0;
+  margin-top: -1rem;
   transition: all 0.3s;
   cursor: pointer;
   &::before,
