@@ -172,8 +172,13 @@ const Services = () => {
 
         if (!textBlock || !svgBlock) return;
 
+        const isLast = index === contents.length - 1;
         const startTop = mq.matches ? "top center+=200" : "top center+=100";
-        const endBottom = mq.matches ? "bottom bottom-=100" : "bottom bottom-=200";
+        const endBottom = isLast
+          ? "bottom center"
+          : mq.matches
+          ? "bottom bottom-=100"
+          : "bottom bottom-=200";
 
         t1.from(textBlock, {
           x: -300,
@@ -204,7 +209,11 @@ const Services = () => {
           },
         });
 
-        const fadeEnd = mq.matches
+        const fadeEnd = isLast
+          ? mq.matches
+            ? { start: "top top+=400", end: "bottom top+=100" }
+            : { start: "top top+=300", end: "bottom top" }
+          : mq.matches
           ? { start: "top top+=300", end: "center top+=300" }
           : { start: "top top+=200", end: "center top+=300" };
 
