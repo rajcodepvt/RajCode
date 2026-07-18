@@ -115,7 +115,8 @@ const OBJ = styled.div`
     width: 15vw;
   }
   @media only Screen and (max-width: 40em) {
-    display: none;
+    opacity: 0.2;
+    width: 20vw;
   }
 `;
 

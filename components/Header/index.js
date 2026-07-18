@@ -101,9 +101,6 @@ const HamburgerBtn = styled.button`
   background-color: transparent;
   width: 2rem;
   height: 2rem;
-  padding: 1rem;
-  margin: -1rem 0;
-  margin-top: -1rem;
   transition: all 0.3s;
   cursor: pointer;
   &::before,
@@ -120,11 +117,11 @@ const HamburgerBtn = styled.button`
     transition: all 0.3s;
   }
   &::before {
-    top: ${(props) => (props.$clicked ? "0" : "-0.5rem")};
+    top: calc(50% - 0.5rem - 1px);
     transform: ${(props) => (props.$clicked ? "rotate(135deg)" : "rotate(0)")};
   }
   &::after {
-    top: ${(props) => (props.$clicked ? "0" : "0.5rem")};
+    top: calc(50% + 0.5rem - 1px);
     transform: ${(props) => (props.$clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
 `;
